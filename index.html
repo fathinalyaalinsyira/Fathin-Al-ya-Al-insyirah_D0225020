@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathin Al'ya Al'insyirah - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Portofolio<span>.</span></a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-toggle-label" aria-label="Buka menu navigasi">
+                
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="intro-badge">
+                    <span> Halo, selamat datang!</span>
+                </div>
+
+                <h1>Saya <span>Fathin Al'ya Al'insyirah</span></h1>
+
+                <p class="hero-description">
+                    Tertarik pada pengembangan web, teknologi, dan pembuatan aplikasi
+                    yang dapat membantu menyelesaikan masalah sehari-hari dengan sentuhan estetik.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Lihat Proyek
+                    </a>
+                    <a href="#modal-profile" class="btn btn-secondary">
+                        Tentang Saya
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="img/AST_8489.jpg"
+                    alt="Foto Profil"
+                    class="profile-photo"
+                >
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="section-heading">
+                <span class="section-label">Hasil Pekerjaan</span>
+                <h2>Proyek Saya</h2>
+                <p>Beberapa proyek menarik yang saya kembangkan dan pelajari.</p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <div class="project-image project-one"></div>
+                    <div class="project-info">
+                        <h3>Aplikasi Kost TA'</h3>
+                        <p>Aplikasi pencarian kos untuk mahasiswa di sekitar kampus dengan filter harga dan fasilitas.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                        </div>
+                        <a href="#modal-kost" class="btn btn-primary project-detail">Lihat Detail</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image project-two"></div>
+                    <div class="project-info">
+                        <h3>Project Perpustakaan</h3>
+                        <p>Aplikasi perpustakaan untuk mengelola data buku, anggota, serta transaksi peminjaman dan pengembalian buku dengan sistem yang mudah digunakan.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                        </div>
+                        <a href="#modal-perpustakaan" class="btn btn-primary project-detail">Lihat Detail</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image project-three"></div>
+                    <div class="project-info">
+                        <h3>Smart Tandon Project</h3>
+                        <p>Proyek mikro pembuatan tandon pintar yang mampu memantau ketinggian air secara real-time dan mengontrol pompa secara otomatis.</p>
+                        <div class="project-tags">
+                            <span>ESP32</span>
+                            <span>Sensor Ultrasonik (JSN-SR04T)</span>
+                            <span>Relay</span>
+                        </div>
+                        <a href="#modal-tandon" class="btn btn-primary project-detail">Lihat Detail</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <span class="section-label">Kontak</span>
+                <h2>Hubungi Saya</h2>
+                <p>Silakan kirim pesan melalui formulir di bawah ini.</p>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" minlength="2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda..." minlength="10" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Kirim Pesan
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <div class="modal" id="modal-kost">
+        <div class="modal-content">
+            <a href="#projects" class="modal-close">&times;</a>
+            <span class="section-label">Detail Proyek</span>
+            <h2>Aplikasi Kost TA'</h2>
+            <p>Platform berbasis web yang memudahkan mahasiswa menemukan kos tanpa harus survei keliling. Dilengkapi fitur pencarian berdasarkan harga, fasilitas, jarak ke kampus, foto kos, lokasi maps, dan kontak pemilik langsung. Admin dapat mengelola data kos dengan mudah.</p>
+            <a href="#projects" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Mengerti</a>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-perpustakaan">
+        <div class="modal-content">
+            <a href="#projects" class="modal-close">&times;</a>
+            <span class="section-label">Detail Proyek</span>
+            <h2>Project Perpustakaan</h2>
+            <p>Sistem informasi perpustakaan digital untuk menggantikan pencatatan manual. Fiturnya mencakup manajemen data buku, manajemen anggota, pencatatan transaksi pinjam-kembali secara otomatis, perhitungan denda keterlambatan, dan laporan riwayat transaksi. Membuat pengelolaan perpustakaan menjadi lebih cepat, rapi, dan terstruktur.</p>
+            <a href="#projects" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Mengerti</a>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-tandon">
+        <div class="modal-content">
+            <a href="#projects" class="modal-close">&times;</a>
+            <span class="section-label">Detail Proyek</span>
+            <h2>Smart Tandon Project</h2>
+            <p>Alat IoT berbasis ESP32 dan sensor ultrasonik untuk memantau ketinggian air tandon secara real-time melalui website/HP. Sistem akan menyalakan pompa secara otomatis saat air hampir habis dan mematikannya saat penuh, sehingga mencegah air meluap atau kehabisan. Data ketinggian air dapat dipantau kapan saja.</p>
+            <a href="#projects" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Mengerti</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Portofolio Fathin Cantik. Dibuat dengan penuh hati dan gaya minimalis estetik.</p>
+    </footer>
+
+</body>
+</html>
